@@ -1,10 +1,18 @@
 def is_isogram(string):
 
 
-    for i in string:
-        k = i+1
-        for k in string:
-            if i == k:
-        return False
+    string = string.lower()
 
-        
+    for i in range(len(string)):
+        char = string[i]
+        print(string[i])
+
+        for k in range(i + 1, len(string)):
+            char2 = string[k]
+
+            if char.isalpha() and char2.isalpha():
+                if char == char2:
+                    return False
+    return True
+
+print(is_isogram("Emily Jung Schwartzkopf"))
